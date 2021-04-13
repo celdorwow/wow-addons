@@ -1,0 +1,33 @@
+## Interface: 80300
+## Title: HandyNotes: Shrines For Jewelcrafters
+## Notes: All six shrine locations for jewelcrafters
+## Author: FranekWoW
+## Version: 1.1.4
+## DefaultState: enabled
+## X-Category: Map
+## X-eMail:
+## SavedVariables: HandyNotes_ShrinesForJewelcraftersDB
+## RequiredDeps: HandyNotes
+## X-WoWI-ID: 24992
+## X-credit: Kemayo and Imoom
+
+#@no-lib-strip@
+embeds.xml
+#@end-no-lib-strip@
+
+Localization/deDE.lua
+Localization/enGB.lua
+Localization/enUS.lua
+Localization/esES.lua
+Localization/esMX.lua
+Localization/frFR.lua
+Localization/itIT.lua
+Localization/koKR.lua
+Localization/ptBR.lua
+Localization/ruRU.lua
+Localization/zhCN.lua
+Localization/zhTW.lua
+
+handler.lua
+config.lua
+Shrines.lua

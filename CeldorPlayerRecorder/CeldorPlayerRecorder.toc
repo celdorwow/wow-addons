@@ -1,0 +1,10 @@
+## Interface: 90005
+## Title: |cFF7ff01cCeldor Player Recorder|r
+## Notes: Record those scam tanks.
+## Version: 1.0
+## SavedVariables: CeldorPlayerRecorderDB
+
+definitions.lua
+config.lua
+player.lua
+init.lua

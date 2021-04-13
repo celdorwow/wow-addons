@@ -1,0 +1,5 @@
+## Interface: 80300
+## Title: Celdor Functions For Macros
+## Notes: Functions to broadcast about rare
+
+core.lua

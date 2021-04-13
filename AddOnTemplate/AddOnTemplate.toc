@@ -1,0 +1,16 @@
+## Interface: 81000
+## Title: AddOnTemplate
+## Version: 1.0
+## Notes: Template.
+## Creator: FranekW
+## Author: FranekW
+## OptionalDeps:  Ace3, LibSharedMedia-3.0
+## SavedVariables: AddonTemplateDB
+## SavedVariablesPerCharacter: AddonTemplatePerCharDB
+## X-Embeds: Ace3
+
+#@no-lib-strip@
+embeds.xml
+#@end-no-lib-strip@
+
+core.lua

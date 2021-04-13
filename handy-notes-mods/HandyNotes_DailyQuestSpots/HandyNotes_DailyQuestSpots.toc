@@ -1,0 +1,35 @@
+## Interface: 80200
+## Title: HandyNotes: Daily Quest Spots
+## Notes: Locations of quest items for dailies
+## Author: FranekWoW
+## Version: 1.0.0
+## DefaultState: enabled
+## X-Category: Map
+## X-eMail:
+## SavedVariables: HandyNotes_DailyQuestSpotsDB
+## RequiredDeps: HandyNotes
+## X-WoWI-ID: 25099
+## X-credit: Kemayo Imoom
+
+#@no-lib-strip@
+embeds.xml
+#@end-no-lib-strip@
+
+Localization/enUS.lua
+# Localization/deDE.lua
+# Localization/enGB.lua
+# Localization/esES.lua
+# Localization/esMX.lua
+# Localization/frFR.lua
+# Localization/itIT.lua
+# Localization/koKR.lua
+# Localization/ptBR.lua
+# Localization/ruRU.lua
+# Localization/zhCN.lua
+# Localization/zhTW.lua
+
+globals.lua
+coralancients.lua
+treasures.lua
+code.lua
+config.lua

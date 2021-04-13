@@ -1,0 +1,11 @@
+## Interface: 80300
+## Title: LibAreaDetector
+## Author: Celdor
+## License: All Rights Reserved
+## Version: @project-version@
+## Notes: Support for addons related to detecting players entering custom areas
+## SavedVariables: LibAreaDetectorDB
+## DefaultState: enabled
+
+embeds.xml
+core.lua

@@ -1,6 +1,5 @@
 addon, nameSpace = ...
 
-
 local Announcement = {
    players = {},
 
@@ -32,7 +31,7 @@ local Announcement = {
          end
       end
    end,
-}
+};
 
 
 -- Table for processing Players
@@ -118,8 +117,14 @@ nameSpace.Player = {
    end,
    FormatUnitName = function (char)
       -- char is a table with Unit Characteristics: name, realm, class, comment, counter etc.
-      local cc = select(4, GetClassColor(strupper(char["class"]):gsub("%s+", "")))
-      return "|c"..cc..char["name"].."-"..char["realm"].."|r"
+      local cc = select(4, GetClassColor(strupper(char["class"]):gsub("%s+", "")));
+      local name = char["name"].."-"..char["realm"];
+      if CeldorPlayerRecorderDB.showlinks then
+         name = "|Hplayer:"..name.."|h[|c"..cc..name.."|r]";
+      else
+         name = "|c"..cc..name.."|r";
+      end
+      return name;
    end,
    SavePlayer = function (self, ...)
       --if not isPlayerInGroup("party") then return end
@@ -259,7 +264,7 @@ nameSpace.Player = {
       end,
       List = function (self, ...)
          if not nameSpace.Array.IsArray(nameSpace.Player.dataBase) then
-            nameSpace.Print(self.wrn("Empty database"))
+            nameSpace.Print(nameSpace.Player.wrn("Empty database"))
             return
          end
 

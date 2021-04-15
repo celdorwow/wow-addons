@@ -1,9 +1,8 @@
 addonName, nameSpace = ...
 
 
-local config = nameSpace.config
-local PTable = nameSpace.Player
-
+local config = nameSpace.config;
+local PTable = nameSpace.Player;
 
 -------------------------------------------------------------------------------
 -- Help
@@ -128,6 +127,7 @@ nameSpace.commands = {
    -- Other commands
    ["resetgroup"] = PTable.ResetGroup,
    ["populategroup"] = PTable.PopulateGroup,
+   ["config"] = config.SetOptions,
 }
 
 local function HandleSlashCommands(str)
@@ -142,10 +142,12 @@ local function HandleSlashCommands(str)
    str = {string.split(" ", str)}
    for id, arg in pairs(str) do
       if type(path[arg]) == "function" then
+         -- The functions are methods and requires table to provide as `self`
          if arg == "editor" then
             path[arg](select(id + 1, unpack(str)))
+         elseif arg == "config" then
+            path[arg](config, select(id + 1, unpack(str)))
          else
-            -- The functions are methods and requires table to provide as `self`
             path[arg](PTable, select(id + 1, unpack(str)))
          end
          return true
@@ -197,6 +199,9 @@ function nameSpace:init()
    SLASH_CeldorPlayerRecorder1 = "/cpr"
    SLASH_CeldorPlayerRecorder2 = "/celdorplayerrecorder"
    SlashCmdList.CeldorPlayerRecorder = HandleSlashCommands
+
+   -- Check configuration
+   config.CheckConfig();
 
    PTable.dataBase = CeldorPlayerRecorderDB.players
    nameSpace.config.output = CeldorPlayerRecorderDB.output
